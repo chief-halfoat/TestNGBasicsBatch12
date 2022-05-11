@@ -22,7 +22,7 @@ public class SoftAssertion {    WebDriver driver;
         this.driver.get("http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login");
     }
 
-    @Test
+    @Test(groups = "regression")
     public void VerifyCredentials() {
         SoftAssert soft = new SoftAssert();
         String expectedText = "Invalid credentials 101";
@@ -38,8 +38,14 @@ public class SoftAssertion {    WebDriver driver;
         soft.assertAll();
     }
 
+    @Test(groups = "smoke")
+    public void loginTest2(){
+        System.out.println("i am test for login under smoke");
+    }
+
     @AfterMethod
     public void CloseBrowser() {
         this.driver.quit();
     }
+
 }

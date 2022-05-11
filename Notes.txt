@@ -140,6 +140,50 @@ git push -u origin main  (first time)
 git push   (after the first time)
 
 
+**************************************TestNG Class02**************************************
+
+testNG XML
+    gives you control over the execution of your whole project
+
+<suite>
+    <test>
+    <package>
+        <classes>
+            <method>
+            </method>
+        </classes>
+    </package>
+    </test>
+</suite>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

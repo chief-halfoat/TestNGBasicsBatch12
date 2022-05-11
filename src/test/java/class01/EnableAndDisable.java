@@ -4,6 +4,11 @@ import org.testng.annotations.Test;
 
 public class EnableAndDisable {
 
+    @Test
+    public void print(){
+        System.out.println("test test test");
+    }
+
 
     @Test(enabled = false)
     public void first(){
