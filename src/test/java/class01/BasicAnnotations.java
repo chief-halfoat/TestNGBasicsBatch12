@@ -16,7 +16,7 @@ public class BasicAnnotations {
         System.out.println("This is my second test case");
     }
     @Test
-    public void thirdTest(){
+    public void bthirdTest(){
         System.out.println("This is my third test case");
     }
 
