@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="TestNG Class 02 HW1">
         <classes>
-            <class name="class01.Priority"></class>
+            <class name="class01.Priority"/>
         </classes>
     </test>
     <test verbose="2" preserve-order="true" name="TestNG Class 02 HW2">
@@ -17,7 +17,7 @@
     </test>
     <test verbose="2" preserve-order="true" name="TestNG Class 02 HW3">
         <packages>
-            <package name="class02"></package>
+            <package name="class02"/>
         </packages>
     </test>
 </suite>

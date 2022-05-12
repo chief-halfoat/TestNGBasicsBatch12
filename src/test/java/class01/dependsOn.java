@@ -2,7 +2,7 @@ package class01;
 
 import org.testng.annotations.Test;
 
-public class DependsOn {
+public class dependsOn {
 
     @Test
     public void login(){

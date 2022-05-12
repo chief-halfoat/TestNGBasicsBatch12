@@ -1,4 +1,4 @@
-package class01;
+package class03;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -10,10 +10,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class SoftAssertion {    WebDriver driver;
-
-    public SoftAssertion() {
-    }
+public class loginTest {
+    WebDriver driver;
 
     @BeforeMethod(alwaysRun = true)
     public void OpenBrowser() {
@@ -37,15 +35,24 @@ public class SoftAssertion {    WebDriver driver;
         soft.assertTrue(displayed);
         soft.assertAll();
     }
-
-    @Test(groups = "smoke")
-    public void loginTest2(){
-        System.out.println("i am test for login under smoke");
+    @Test(groups = "regression")
+    public void VerifyCredentials2() {
+        SoftAssert soft = new SoftAssert();
+        String expectedText = "Invalid credentials";
+        WebElement Username = this.driver.findElement(By.id("txtUsername"));
+        boolean displayed = Username.isDisplayed();
+        Username.sendKeys(new CharSequence[]{"123456"});
+        this.driver.findElement(By.id("txtPassword")).sendKeys(new CharSequence[]{"123456"});
+        this.driver.findElement(By.id("btnLogin")).click();
+        String text = this.driver.findElement(By.id("spanMessage")).getText();
+        soft.assertEquals(text, expectedText);
+        System.out.println("hello world");
+        soft.assertTrue(displayed);
+        soft.assertAll();
     }
 
     @AfterMethod(alwaysRun = true)
     public void CloseBrowser() {
         this.driver.quit();
     }
-
 }
